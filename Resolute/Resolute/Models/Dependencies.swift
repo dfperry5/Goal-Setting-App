@@ -15,7 +15,7 @@ class Dependencies: ObservableObject {
   var dateFormatter: DateFormatter
   
   public init() {
-    goalsService = GoalsService()
+    goalsService = HardCodedGoalsService()
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
     formatter.timeStyle = .none

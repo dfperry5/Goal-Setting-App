@@ -23,6 +23,10 @@
 		790C29212597F4E7005E9A52 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C29202597F4E7005E9A52 /* Transformer.swift */; };
 		790C29262597F4FF005E9A52 /* Transformer+HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C29252597F4FF005E9A52 /* Transformer+HomeScreen.swift */; };
 		790C292B2597F6EF005E9A52 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C292A2597F6EF005E9A52 /* Dependencies.swift */; };
+		7924E7D2259BBDFC00448F3A /* HardCodedGoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7D1259BBDFC00448F3A /* HardCodedGoalsService.swift */; };
+		7924E7E325A2804900448F3A /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7E225A2804900448F3A /* GoalType.swift */; };
+		7924E7F125A2874300448F3A /* AddGoal+GoalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7F025A2874300448F3A /* AddGoal+GoalInformation.swift */; };
+		7924E7F725A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7F625A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift */; };
 		794F3BE62597FAA2006B1EEE /* ActiveGoals+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F3BE52597FAA2006B1EEE /* ActiveGoals+Row.swift */; };
 		794F3BF12597FED2006B1EEE /* CompletedGoals+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F3BF02597FED2006B1EEE /* CompletedGoals+Row.swift */; };
 		794F3BF62597FF9A006B1EEE /* ActiveGoals+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F3BF52597FF9A006B1EEE /* ActiveGoals+ViewModel.swift */; };
@@ -74,6 +78,10 @@
 		790C29202597F4E7005E9A52 /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		790C29252597F4FF005E9A52 /* Transformer+HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transformer+HomeScreen.swift"; sourceTree = "<group>"; };
 		790C292A2597F6EF005E9A52 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		7924E7D1259BBDFC00448F3A /* HardCodedGoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedGoalsService.swift; sourceTree = "<group>"; };
+		7924E7E225A2804900448F3A /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		7924E7F025A2874300448F3A /* AddGoal+GoalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddGoal+GoalInformation.swift"; sourceTree = "<group>"; };
+		7924E7F625A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddGoal+GoalInformation+ViewModel.swift"; sourceTree = "<group>"; };
 		794F3BE52597FAA2006B1EEE /* ActiveGoals+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActiveGoals+Row.swift"; sourceTree = "<group>"; };
 		794F3BF02597FED2006B1EEE /* CompletedGoals+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedGoals+Row.swift"; sourceTree = "<group>"; };
 		794F3BF52597FF9A006B1EEE /* ActiveGoals+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActiveGoals+ViewModel.swift"; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			children = (
 				790C28EE2597EBDB005E9A52 /* Goal.swift */,
 				790C292A2597F6EF005E9A52 /* Dependencies.swift */,
+				7924E7E225A2804900448F3A /* GoalType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 		790C29092597F2DD005E9A52 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7924E7D6259BBE2200448F3A /* Hard-Coded */,
 				790C29152597F30D005E9A52 /* GoalsService.swift */,
 			);
 			path = Services;
@@ -259,9 +269,27 @@
 			path = Transformer;
 			sourceTree = "<group>";
 		};
+		7924E7D6259BBE2200448F3A /* Hard-Coded */ = {
+			isa = PBXGroup;
+			children = (
+				7924E7D1259BBDFC00448F3A /* HardCodedGoalsService.swift */,
+			);
+			path = "Hard-Coded";
+			sourceTree = "<group>";
+		};
+		7924E7F525A2893000448F3A /* Goal Information */ = {
+			isa = PBXGroup;
+			children = (
+				7924E7F025A2874300448F3A /* AddGoal+GoalInformation.swift */,
+				7924E7F625A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift */,
+			);
+			path = "Goal Information";
+			sourceTree = "<group>";
+		};
 		794F3C1325980A5A006B1EEE /* AddGoal */ = {
 			isa = PBXGroup;
 			children = (
+				7924E7F525A2893000448F3A /* Goal Information */,
 				794F3C1425980A68006B1EEE /* AddGoal.swift */,
 			);
 			path = AddGoal;
@@ -404,13 +432,17 @@
 				790C28D82597EA5A005E9A52 /* Home.swift in Sources */,
 				794F3C0F25980265006B1EEE /* ResoluteAppContainer+Helpers.swift in Sources */,
 				790C29212597F4E7005E9A52 /* Transformer.swift in Sources */,
+				7924E7F125A2874300448F3A /* AddGoal+GoalInformation.swift in Sources */,
 				794F3C0525980106006B1EEE /* CompletedGoals+ViewModel.swift in Sources */,
 				794F3C00259800CF006B1EEE /* Transformer+CompletedGoals.swift in Sources */,
 				790C28862597E779005E9A52 /* ResoluteApp.swift in Sources */,
+				7924E7F725A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift in Sources */,
 				794F3BFB25980046006B1EEE /* Transformer+ActiveGoals.swift in Sources */,
 				790C29162597F30D005E9A52 /* GoalsService.swift in Sources */,
 				794F3C1525980A68006B1EEE /* AddGoal.swift in Sources */,
 				794F3BE62597FAA2006B1EEE /* ActiveGoals+Row.swift in Sources */,
+				7924E7D2259BBDFC00448F3A /* HardCodedGoalsService.swift in Sources */,
+				7924E7E325A2804900448F3A /* GoalType.swift in Sources */,
 				790C28FD2597F0FC005E9A52 /* CompletedGoals.swift in Sources */,
 				790C28EF2597EBDB005E9A52 /* Goal.swift in Sources */,
 				790C29262597F4FF005E9A52 /* Transformer+HomeScreen.swift in Sources */,
