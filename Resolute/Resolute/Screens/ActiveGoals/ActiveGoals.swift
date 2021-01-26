@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ActiveGoals {
-  let viewModel: ViewModel
+  @State
+  var viewModel: ViewModel
+  
   @State
   var showAddScreen: Bool = false
 }
@@ -17,7 +19,7 @@ extension ActiveGoals: View {
       VStack {
         List(viewModel.goals, id: \.id) { goal in
           NavigationLink(
-            destination: Text("Destination"),
+            destination: GoalDetails().environmentObject(GoalDetails.ViewModel(goal: goal)),
             label: {
               Row(goal: goal)
             })

@@ -8,12 +8,14 @@
 import Foundation
 
 struct Goal {
-  let id: UUID
-  let name: String
-  let description: String
-  let isActive: Bool
-  let targettedCompletion: Date
-  let completedDate: Date?
+  var id: UUID
+  var name: String
+  var description: String
+  var isActive: Bool
+  var targettedCompletion: Date
+  var completedDate: Date?
+  static let empty = Goal(id: UUID(), name: "Test", description: "test", isActive: true, targettedCompletion: Date())
+
 
   public init(id: UUID, name: String, description: String, isActive: Bool, targettedCompletion: Date, completedDate: Date? = nil) {
     self.id = id
@@ -23,4 +25,5 @@ struct Goal {
     self.targettedCompletion = targettedCompletion
     self.completedDate = completedDate
   }
+  
 }
