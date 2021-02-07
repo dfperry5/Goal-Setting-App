@@ -30,6 +30,7 @@
 		79123A0D25BFC21500770767 /* EditGoal+CompositionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79123A0C25BFC21500770767 /* EditGoal+CompositionViews.swift */; };
 		79123A1225BFC23A00770767 /* EditGoal+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79123A1125BFC23A00770767 /* EditGoal+Columns.swift */; };
 		79123A1D25BFC2AA00770767 /* Details+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79123A1C25BFC2AA00770767 /* Details+Row.swift */; };
+		79248C5825CF617D00ADE35E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79248C5725CF617D00ADE35E /* ActivityViewController.swift */; };
 		7924E7D2259BBDFC00448F3A /* HardCodedGoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7D1259BBDFC00448F3A /* HardCodedGoalsService.swift */; };
 		7924E7E325A2804900448F3A /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7E225A2804900448F3A /* GoalType.swift */; };
 		7924E7F125A2874300448F3A /* AddGoal+GoalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924E7F025A2874300448F3A /* AddGoal+GoalInformation.swift */; };
@@ -92,6 +93,7 @@
 		79123A0C25BFC21500770767 /* EditGoal+CompositionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditGoal+CompositionViews.swift"; sourceTree = "<group>"; };
 		79123A1125BFC23A00770767 /* EditGoal+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditGoal+Columns.swift"; sourceTree = "<group>"; };
 		79123A1C25BFC2AA00770767 /* Details+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Details+Row.swift"; sourceTree = "<group>"; };
+		79248C5725CF617D00ADE35E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		7924E7D1259BBDFC00448F3A /* HardCodedGoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedGoalsService.swift; sourceTree = "<group>"; };
 		7924E7E225A2804900448F3A /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		7924E7F025A2874300448F3A /* AddGoal+GoalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddGoal+GoalInformation.swift"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		790C291E2597F432005E9A52 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				79248C5625CF615800ADE35E /* Share */,
 				791239EF25BE293C00770767 /* GoalDetails */,
 				794F3C1325980A5A006B1EEE /* AddGoal */,
 				790C291D2597F3DE005E9A52 /* ResoluteAppContainer */,
@@ -312,6 +315,14 @@
 				79123A1C25BFC2AA00770767 /* Details+Row.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		79248C5625CF615800ADE35E /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				79248C5725CF617D00ADE35E /* ActivityViewController.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		7924E7D6259BBE2200448F3A /* Hard-Coded */ = {
@@ -479,6 +490,7 @@
 				790C29212597F4E7005E9A52 /* Transformer.swift in Sources */,
 				7924E7F125A2874300448F3A /* AddGoal+GoalInformation.swift in Sources */,
 				794F3C0525980106006B1EEE /* CompletedGoals+ViewModel.swift in Sources */,
+				79248C5825CF617D00ADE35E /* ActivityViewController.swift in Sources */,
 				794F3C00259800CF006B1EEE /* Transformer+CompletedGoals.swift in Sources */,
 				790C28862597E779005E9A52 /* ResoluteApp.swift in Sources */,
 				7924E7F725A2894600448F3A /* AddGoal+GoalInformation+ViewModel.swift in Sources */,

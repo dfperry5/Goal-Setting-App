@@ -11,13 +11,18 @@ struct GoalDetails {
   
   @EnvironmentObject
   var viewModel: ViewModel
+
   
   @State
   private var editMode: EditMode = .inactive
   
   @State
   var draftGoal: Goal = Goal.empty
+  
+  @State
+  private var showModal = false
 
+  private let formatter = DateFormatter()
   
   @State
   var testString = "Test"
@@ -26,6 +31,7 @@ struct GoalDetails {
 extension GoalDetails {
   private func shareGoal(){
     print("Share this goal")
+    showModal = true
   }
 }
 
@@ -44,7 +50,6 @@ extension GoalDetails: View {
          
         }
         
-        
         Divider()
         
         if self.editMode == .active {
@@ -62,6 +67,10 @@ extension GoalDetails: View {
       .navigationBarTitle(viewModel.goal.name)
       .navigationBarItems(trailing: EditButton())
       .environment(\.editMode, $editMode)
+      .sheet(isPresented: $showModal) {
+        return ActivityViewController(activityItems: [getMessageToSend()], completionHandler: executeOnShareCompleted)
+      }
+      
     }
 }
 
@@ -71,6 +80,18 @@ extension GoalDetails {
       return AnyView(TextField("Text:", text: self.$testString))
     }
     return AnyView(Text(testString))
+  }
+  
+  func getMessageToSend() -> String {
+    formatter.dateStyle = .medium
+    let dateString = formatter.string(from: viewModel.goal.targettedCompletion)
+    return "Hey! I'm trying to \(viewModel.goal.name) by \(dateString) - Keep me honest!"
+  }
+  
+  private func executeOnShareCompleted(activity: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, activityError: Error?) {
+    if completed {
+      self.showModal = false
+    }
   }
 }
 
